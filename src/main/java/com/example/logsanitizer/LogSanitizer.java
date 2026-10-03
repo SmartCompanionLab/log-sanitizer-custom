@@ -35,4 +35,8 @@ public final class LogSanitizer {
 
         return result;
     }
+
+    public static String addCustomerPrefix(String input) {
+        return "[CUSTOMER] " + input;
+    }
 }

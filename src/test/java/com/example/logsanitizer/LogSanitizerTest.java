@@ -1,8 +1,7 @@
 package com.example.logsanitizer;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 class LogSanitizerTest {
 
@@ -41,5 +40,13 @@ class LogSanitizerTest {
         assertEquals(
                 "User=j***@example.com password=**** token=****",
                 LogSanitizer.sanitize(input));
+    }
+
+    @Test
+    void shouldAddCustomerPrefix() {
+        String input = "User login successful";
+        assertEquals(
+                "[CUSTOMER] User login successful",
+                LogSanitizer.addCustomerPrefix(input));
     }
 }
