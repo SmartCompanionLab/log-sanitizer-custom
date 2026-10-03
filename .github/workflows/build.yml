@@ -46,7 +46,8 @@ jobs:
         run: mvn clean verify -Dgpg.skip=true
 
       - name: Publish to Maven Central
-        if: startsWith(github.ref, 'refs/tags/v')
+        # if: startsWith(github.ref, 'refs/tags/v')
+        if: false
         env:
           CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
           CENTRAL_TOKEN: ${{ secrets.CENTRAL_TOKEN }}
