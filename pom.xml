@@ -9,7 +9,7 @@
 
     <groupId>io.github.smartcompanionlab</groupId>
     <artifactId>log-sanitizer-custom</artifactId>
-    <version>1.0.1</version>
+    <version>1.2.0</version>
 
     <name>Log Sanitizer</name>
     <description>Small Java utility for masking sensitive information in logs</description>
